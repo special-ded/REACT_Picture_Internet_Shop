@@ -21,7 +21,7 @@ function ContextProvider(props) {
   React.useEffect(function () {
     fetch('https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json')
       .then(res => res.json())
-      .then(data => allPhotos == [] ? setAllPhotos(data) : null)
+      .then(data =>  setAllPhotos(data))
   }, [])
 
   const [allPhotos, setAllPhotos] = useState(
